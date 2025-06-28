@@ -1,51 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <div id="header-section">
-            <h1>Welcome to MindCompass</h1>
-            <h2>Games to test your geography brainpower</h2>
-            <h3>MindCompass is designed to be a two-player game.
-                Perfect for road trips or to pass time!</h3>
-        </div>
-        <div id="game-one">
-            <h4>Name all the countries starting with the letter...</h4>
-            <button id="choose-random-letter">Choose a random letter</button>
-            <div id="letter-btns">
-                <button id="a-btn">A</button>
-                <button id="b-btn">B</button>
-                <button id="c-btn">C</button>
-                <button id="d-btn">D</button>
-                <button id="e-btn">E</button>
-                <button id="f-btn">F</button>
-                <button id="g-btn">G</button>
-                <button id="h-btn">H</button>
-                <button id="i-btn">I</button>
-                <button id="j-btn">J</button>
-                <button id="k-btn">K</button>
-                <button id="l-btn">L</button>
-                <button id="m-btn">M</button>
-                <button id="n-btn">N</button>
-                <button id="o-btn">O</button>
-                <button id="p-btn">P</button>
-                <button id="q-btn">Q</button>
-                <button id="r-btn">R</button>
-                <button id="s-btn">S</button>
-                <button id="t-btn">T</button>
-                <button id="u-btn">U</button>
-                <button id="v-btn">V</button>
-                <button id="w-btn">W</button>
-                <button id="x-btn">X</button>
-                <button id="y-btn">Y</button>
-                <button id="z-btn">Z</button>
+        <header>
+            <div class="container">
+                <h1>Welcome to MindCompass</h1>
+                <h3>Games to test your geography brainpower</h3>
+                <p>MindCompass is designed to be a two-player game. Perfect for road trips or to pass time!</p>
             </div>
-            <div id="generated-letter-countries">
-                <p id="chosen-letter">Letter:</p>
-                <p id="countries-list">Countries:</p>
+        </header>
+        <main>
+            <div class="container">
+                <section>
+                    <h2>Name all the countries starting with the letter...</h2>
+                    <button id="choose-random-letter" class="letter-game-button">Choose a random letter</button>
+                    <div id="letter-btns">
+                        <button id="a-btn" class="letter-game-button">A</button>
+                        <button id="b-btn" class="letter-game-button">B</button>
+                        <button id="c-btn" class="letter-game-button">C</button>
+                        <button id="d-btn" class="letter-game-button">D</button>
+                        <button id="e-btn" class="letter-game-button">E</button>
+                        <button id="f-btn" class="letter-game-button">F</button>
+                        <button id="g-btn" class="letter-game-button">G</button>
+                        <button id="h-btn" class="letter-game-button">H</button>
+                        <button id="i-btn" class="letter-game-button">I</button>
+                        <button id="j-btn" class="letter-game-button">J</button>
+                        <button id="k-btn" class="letter-game-button">K</button>
+                        <button id="l-btn" class="letter-game-button">L</button>
+                        <button id="m-btn" class="letter-game-button">M</button>
+                        <button id="n-btn" class="letter-game-button">N</button>
+                        <button id="o-btn" class="letter-game-button">O</button>
+                        <button id="p-btn" class="letter-game-button">P</button>
+                        <button id="q-btn" class="letter-game-button">Q</button>
+                        <button id="r-btn" class="letter-game-button">R</button>
+                        <button id="s-btn" class="letter-game-button">S</button>
+                        <button id="t-btn" class="letter-game-button">T</button>
+                        <button id="u-btn" class="letter-game-button">U</button>
+                        <button id="v-btn" class="letter-game-button">V</button>
+                        <button id="w-btn" class="letter-game-button">W</button>
+                        <button id="x-btn" class="letter-game-button">X</button>
+                        <button id="y-btn" class="letter-game-button">Y</button>
+                        <button id="z-btn" class="letter-game-button">Z</button>
+                    </div>
+                    <div id="generated-letter-countries">
+                        <div class="flex-width">
+                            <p>Letter:</p>
+                            <p id="chosen-letter"></p>
+                        </div>
+                        <div class="flex-width">
+                            <p>Number of Countries:</p>
+                            <p id="countries-number"></p>
+                        </div>
+                        <div class="flex-width">
+                            <p>Countries:</p>
+                            <p id="countries-list"></p>
+                        </div>
+                    </div>
+                </section>
             </div>
-        </div>
+            <section class="more-games-section">
+                <div class="container">
+                    <h4>Want to play more games?</h4>
+                    <a href="" class="capital-cities-button">Guess Capital Cities</a>
+                </div>
+            </section>
+            </div>
+        </main>
     <script src="index.js"></script>
     </body>
 </html>

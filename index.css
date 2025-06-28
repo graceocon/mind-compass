@@ -7,13 +7,29 @@ body {
     font-family: "nordic";
     text-align: center;
     margin: 0;
-    max-width: 960px;
 }
 
-#header-section {
+/* Layout */
+
+header, .more-games-section {
     background-color: #ffa62b;
     color: #F2F0EF;
 }
+
+main{
+    background-color: #F2F0EF;
+}
+
+section {
+    font-size: 30px;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+/* Typography */
 
 h1 {
     padding: 50px 0 40px;
@@ -22,26 +38,26 @@ h1 {
 }
 
 h2 {
-    margin: 0;
-}
-
-h3 {
-    padding: 20px 0;
-    margin: 0;
-}
-
-#game-one {
-    background-color: #F2F0EF;
-    font-size: 30px;
-}
-
-h4 {
     padding: 40px 0 10px;
     margin: 0;
+    font-size: 2rem;
     color: #2d2d2d;
 }
 
-button {
+h3 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+p {
+    padding: 20px 0;
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+/* Buttons and generated letter / countries */
+
+.letter-game-button {
     font-family: inherit;
     padding: 10px 20px;
     margin: 10px auto;
@@ -52,17 +68,30 @@ button {
     border-radius: 5px;
 }
 
+.letter-game-button:hover, .letter-game-button:active {
+    background-color: #ffa62b;
+}
+
 #letter-btns {
     margin: 0 auto;
     width: 600px;
     text-align: center;
 }
 
+.flex-width {
+    width: 250px;
+}
 #generated-letter-countries {
+    width: 750px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    /* flex-direction: column; */
+    margin: 0 auto;
 }
 
 #countries-list {
     padding-bottom: 40px;
 }
+
+/* Play more games section */
+
