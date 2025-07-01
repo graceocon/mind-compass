@@ -136,7 +136,7 @@ const lettersCountries = [
 let chosenLetter = document.getElementById("chosen-letter")
 let countriesNumber = document.getElementById("countries-number")
 let countriesList = document.getElementById("countries-list")
-let generateRandomLetter =  document.getElementById("choose-random-letter")
+let generateRandomLetter =  document.getElementById("random-btn")
 
 // generateRandomLetter.addEventListener("click", function() {
 //     let randomLetter = Math.floor( Math.random() * letters.length )

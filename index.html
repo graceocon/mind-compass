@@ -14,44 +14,44 @@
             <div class="container">
                 <h1>Welcome to <span class="mindcompass-title">MindCompass</span></h1>
                 <h3>Games to test your geography brainpower</h3>
-                <p>MindCompass is the perfect two-player game for road trips or to pass time!</p>
+                <p class="header-p">MindCompass is the perfect two-player game for road trips or to pass time!</p>
             </div>
         </header>
         <main>
             <div class="container">
                 <section>
                     <h2>Name all the countries starting with the letter...</h2>
-                    <button id="choose-random-letter" class="letter-game-button">Choose a random letter</button>
-                    <div id="letter-btns">
-                        <button id="a-btn" class="letter-game-button">A</button>
-                        <button id="b-btn" class="letter-game-button">B</button>
-                        <button id="c-btn" class="letter-game-button">C</button>
-                        <button id="d-btn" class="letter-game-button">D</button>
-                        <button id="e-btn" class="letter-game-button">E</button>
-                        <button id="f-btn" class="letter-game-button">F</button>
-                        <button id="g-btn" class="letter-game-button">G</button>
-                        <button id="h-btn" class="letter-game-button">H</button>
-                        <button id="i-btn" class="letter-game-button">I</button>
-                        <button id="j-btn" class="letter-game-button">J</button>
-                        <button id="k-btn" class="letter-game-button">K</button>
-                        <button id="l-btn" class="letter-game-button">L</button>
-                        <button id="m-btn" class="letter-game-button">M</button>
-                        <button id="n-btn" class="letter-game-button">N</button>
-                        <button id="o-btn" class="letter-game-button">O</button>
-                        <button id="p-btn" class="letter-game-button">P</button>
-                        <button id="q-btn" class="letter-game-button">Q</button>
-                        <button id="r-btn" class="letter-game-button">R</button>
-                        <button id="s-btn" class="letter-game-button">S</button>
-                        <button id="t-btn" class="letter-game-button">T</button>
-                        <button id="u-btn" class="letter-game-button">U</button>
-                        <button id="v-btn" class="letter-game-button">V</button>
-                        <button id="w-btn" class="letter-game-button">W</button>
-                        <button id="x-btn" class="letter-game-button">X</button>
-                        <button id="y-btn" class="letter-game-button">Y</button>
-                        <button id="z-btn" class="letter-game-button">Z</button>
+                    <button id="random-btn" class="random-btn all-btns">Choose a random letter</button>
+                    <div class="letter-btns">
+                        <button id="a-btn" class="random-letter-btn all-btns">A</button>
+                        <button id="b-btn" class="random-letter-btn all-btns">B</button>
+                        <button id="c-btn" class="random-letter-btn all-btns">C</button>
+                        <button id="d-btn" class="random-letter-btn all-btns">D</button>
+                        <button id="e-btn" class="random-letter-btn all-btns">E</button>
+                        <button id="f-btn" class="random-letter-btn all-btns">F</button>
+                        <button id="g-btn" class="random-letter-btn all-btns">G</button>
+                        <button id="h-btn" class="random-letter-btn all-btns">H</button>
+                        <button id="i-btn" class="random-letter-btn all-btns">I</button>
+                        <button id="j-btn" class="random-letter-btn all-btns">J</button>
+                        <button id="k-btn" class="random-letter-btn all-btns">K</button>
+                        <button id="l-btn" class="random-letter-btn all-btns">L</button>
+                        <button id="m-btn" class="random-letter-btn all-btns">M</button>
+                        <button id="n-btn" class="random-letter-btn all-btns">N</button>
+                        <button id="o-btn" class="random-letter-btn all-btns">O</button>
+                        <button id="p-btn" class="random-letter-btn all-btns">P</button>
+                        <button id="q-btn" class="random-letter-btn all-btns">Q</button>
+                        <button id="r-btn" class="random-letter-btn all-btns">R</button>
+                        <button id="s-btn" class="random-letter-btn all-btns">S</button>
+                        <button id="t-btn" class="random-letter-btn all-btns">T</button>
+                        <button id="u-btn" class="random-letter-btn all-btns">U</button>
+                        <button id="v-btn" class="random-letter-btn all-btns">V</button>
+                        <button id="w-btn" class="random-letter-btn all-btns">W</button>
+                        <button id="x-btn" class="random-letter-btn all-btns">X</button>
+                        <button id="y-btn" class="random-letter-btn all-btns">Y</button>
+                        <button id="z-btn" class="random-letter-btn all-btns">Z</button>
                     </div>
-                    <div id="generated-letter-countries">
-                        <div class="flex-width">
+                    <div id="generated-letter-countries" class="generated-letter-countries">
+                        <div>
                             <p>Letter:</p>
                             <p id="chosen-letter"></p>
                         </div>
@@ -61,7 +61,7 @@
                         </div>
                         <div class="flex-width">
                             <p>Countries:</p>
-                            <ul id="countries-list"></ul>
+                            <ul id="countries-list" class="countries-list"></ul>
                         </div>
                     </div>
                 </section>
@@ -69,7 +69,11 @@
             <section class="more-games-section">
                 <div class="container">
                     <h4>Want to play more games?</h4>
-                    <a href="" class="capital-cities-button">Guess Capital Cities</a>
+                    <div class="more-games-btns">
+                        <a href="" class="capital-btn end-btns">Guess the Capital Cities</a>
+                        <a href="" class="random-qus-btn end-btns">Questions to Get You Talking</a>
+                        <a href="" class="would-you-rather-btn end-btns">Would You Rather...</a>
+                    </div>
                 </div>
             </section>
             </div>

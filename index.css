@@ -15,26 +15,19 @@ header, .more-games-section {
     color: #F2F0EF;
 }
 
-main{
-    background-color: #F2F0EF;
-}
-
-section {
-    font-size: 30px;
-}
-
 .container {
     width: 430px;
     margin: 0 auto;
-
 }
+
 
 /* TYPOGRAPHY */
 
 h1 {
-    padding: 50px 0 40px;
     margin: 0;
-    font-size: 3rem;
+    padding-top: 50px;
+    font-size: 3.25rem;
+    line-height: 1.5cm;
 }
 
 h2 {
@@ -45,64 +38,120 @@ h2 {
 }
 
 h3 {
-    margin: 0;
-    font-size: 2rem;
+    margin: 30px 0 0 0;
+    font-size: 1.75rem;
+}
+
+h4 {
+    padding: 30px 0 10px;
+    font-size: 1.75rem;
+    margin-bottom: 0;
+}
+
+h2,
+h3,
+.header-p {
+    line-height: 110%;
 }
 
 p {
-    padding: 20px 0;
+    padding: 0;
     margin: 0;
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
+
+ul {
+    margin: 0;
+    border: 1px solid red;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    margin: 0;
+    padding-bottom: 0;
+}
+
 
 /* OTHER CLASSES */
 
 .mindcompass-title {
+    font-size: 3rem;
     font-weight: 900;
     color: hotpink;
+    text-shadow: 0 0 2px #fff;
+    padding: 0;
 }
 
-/* BUTTONS */
-
-.letter-game-button {
-    font-family: inherit;
-    padding: 10px 20px;
-    margin: 10px auto;
-    background-color: #2d2d2d;
-    color: #F2F0EF;
-    font-size: 20px;
-    border: none;
-    border-radius: 5px;
+.header-p {
+    padding: 35px 0 40px;
+    font-size: 1.25rem;
 }
 
-.letter-game-button:hover, .letter-game-button:active {
-    background-color: #ffa62b;
-}
-
-#letter-btns {
-    margin: 0 auto;
-    text-align: center;
-}
-
-.flex-width {
-    width: 100px;
-}
-#generated-letter-countries {
+.generated-letter-countries {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    /* flex-direction: column; */
     text-align: left;
-    margin: 0 auto;
+    margin: 0;
+    border: 1px red solid;
 }
 
-#countries-list {
+.countries-list {
     list-style: none;
-    padding-bottom: 40px;
+    font-size: 1rem;
 }
 
 .checkbox {
     
 }
 
-/* Play more games section */
+/* .more-games-btns {
+    display: flex;
+    flex-direction: column;
+} */
 
+
+/* BUTTONS */
+
+.capital-btn,
+.end-btns {
+    padding: 10px 20px;
+}
+
+.all-btns,
+.end-btns {
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 700;
+    background-color: #2d2d2d;
+    color: #F2F0EF;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.all-btns {
+    margin: 10px auto;
+}
+
+.end-btns {
+    margin: 5px 0;
+}
+
+.random-letter-btn {
+    width: 50px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.all-btns:hover,
+.all-btns:active {
+    background-color: #ffa62b;
+}
+
+.end-btns:hover,
+.all-btns:active {
+    background-color: #F2F0EF;
+    color: #2d2d2d;
+}
