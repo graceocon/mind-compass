@@ -10,9 +10,11 @@ body {
     color: #2d2d2d;
 }
 
-header, .more-games-section {
+header,
+.more-games-section {
     background-color: #ffa62b;
     color: #F2F0EF;
+    padding: 0 20px;
 }
 
 .container {
@@ -114,7 +116,7 @@ a {
 
 /* BUTTONS */
 
-.capital-btn,
+.random-btn,
 .end-btns {
     padding: 10px 20px;
 }

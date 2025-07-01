@@ -133,10 +133,7 @@ const lettersCountries = [
 
 // const letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
-let chosenLetter = document.getElementById("chosen-letter")
-let countriesNumber = document.getElementById("countries-number")
-let countriesList = document.getElementById("countries-list")
-let generateRandomLetter =  document.getElementById("random-btn")
+// SCRIBBLE
 
 // generateRandomLetter.addEventListener("click", function() {
 //     let randomLetter = Math.floor( Math.random() * letters.length )
@@ -144,8 +141,6 @@ let generateRandomLetter =  document.getElementById("random-btn")
 //     }
 // )
 
-
-// SCRIBBLE
 
 // function generateRandomLetterCountries() {
 //     let randomArray = Math.floor( Math.random() * lettersCountries.length)
@@ -169,16 +164,6 @@ let generateRandomLetter =  document.getElementById("random-btn")
 //     }
 // )
 
-generateRandomLetter.addEventListener("click", function() {
-    let randomArray = Math.floor( Math.random() * lettersCountries.length)
-    chosenLetter.textContent = lettersCountries[randomArray].letter
-    countriesNumber.textContent = lettersCountries[randomArray].number
-    countriesList.innerHTML = "<li>" + lettersCountries[randomArray].countries + "</li>"
-    }
-)
-
-// SCRIBBLE
-
 
 // generateRandomLetter.addEventListener("click", function() {
 //     let randomArray = Math.floor( Math.random() * lettersCountries.length)
@@ -188,66 +173,133 @@ generateRandomLetter.addEventListener("click", function() {
 //     }
 // )
 
+
+let chosenLetter = document.getElementById("chosen-letter")
+let countriesNumber = document.getElementById("countries-number")
+let countriesList = document.getElementById("countries-list")
+
+
+let generateRandomLetter =  document.getElementById("random-btn")
+
+generateRandomLetter.addEventListener("click", function() {
+    let randomArray = Math.floor( Math.random() * lettersCountries.length)
+    chosenLetter.textContent = lettersCountries[randomArray].letter
+    countriesNumber.textContent = lettersCountries[randomArray].number
+
+    let countriesListRandom = ""
+    for (i = 0; i < lettersCountries[randomArray].countries.length; i++) {
+        countriesListRandom +=
+        `<li>
+        <input type=checkbox class="checkbox"/>
+        ${lettersCountries[randomArray].countries[i]}
+        </li>`
+    }
+    countriesList.innerHTML = countriesListRandom
+})
+
+
 let aBtn = document.getElementById("a-btn")
 
 aBtn.addEventListener("click", function() {
     chosenLetter.textContent = lettersCountries[0].letter
     countriesNumber.textContent = lettersCountries[0].number
-    countriesList.textContent = lettersCountries[0].countries
+    
+    let countriesListA = ""
+    for (i = 0; i < lettersCountries[0].countries.length; i++) {
+        countriesListA +=
+        `<li>
+        <input type=checkbox class="checkbox"/>
+        ${lettersCountries[0].countries[i]}
+        </li>`
     }
-)
+    countriesList.innerHTML = countriesListA
+})
+
 
 let bBtn = document.getElementById("b-btn")
 
 bBtn.addEventListener("click", function() {
     chosenLetter.textContent = lettersCountries[1].letter
     countriesNumber.textContent = lettersCountries[1].number
-    countriesList.textContent = lettersCountries[1].countries
+
+    let countriesListB = ""
+    for (i = 0; i < lettersCountries[1].countries.length; i++) {
+        countriesListB +=
+        `<li>
+        <input type=checkbox class="checkbox"/>
+        ${lettersCountries[1].countries[i]}
+        </li>`
     }
-)
+    countriesList.innerHTML = countriesListB
+})
+
 
 let cBtn = document.getElementById("c-btn")
 
 cBtn.addEventListener("click", function() {
     chosenLetter.textContent = lettersCountries[2].letter
     countriesNumber.textContent = lettersCountries[2].number
-    countriesList.textContent = lettersCountries[2].countries
+
+    let countriesListC = ""
+    for (i = 0; i < lettersCountries[2].countries.length; i++) {
+        countriesListC +=
+        `<li>
+        <input type=checkbox class="checkbox"/>
+        ${lettersCountries[2].countries[i]}</li>`
     }
-)
+    countriesList.innerHTML = countriesListC
+})
+
 
 let dBtn = document.getElementById("d-btn")
-
-function renderCountriesListD() {
-let countriesListD = ""
-for (i = 0; i < lettersCountries[3].countries.length; i++) {
-    countriesListD += `<li><input type=checkbox class="checkbox"/> ${lettersCountries[3].countries[i]}</li>`
-}
-    countriesList.innerHTML = countriesListD
-}
 
 dBtn.addEventListener("click", function() {
     chosenLetter.textContent = lettersCountries[3].letter
     countriesNumber.textContent = lettersCountries[3].number
-    renderCountriesListD()
+
+    let countriesListD = ""
+    for (i = 0; i < lettersCountries[3].countries.length; i++) {
+        countriesListD +=
+        `<li>
+        <input type=checkbox class="checkbox"/>
+        ${lettersCountries[3].countries[i]}
+        </li>`
     }
-)
+    countriesList.innerHTML = countriesListD
+})
+
+//
+
+function renderCountriesList() {
+
+    let chosenCountry = ""
+    for (i = 0; i < countriesList.length; i++) {
+        chosenCountry = countriesList[i]
+    }
+
+    let chosenCountryList = ""
+    for (ii = 0; i < chosenCountry.countries.length; ii++) {
+        chosenCountryList += chosenCountry.countries[ii]
+    }
+
+    countriesList.innerHTML =
+        `<li>
+        <input type=checkbox class="checkbox"/>
+        ${chosenCountryList}
+        </li>`
+}
 
 let eBtn = document.getElementById("e-btn")
-
-function renderCountriesListE() {
-let countriesListE = ""
-for (i = 0; i < lettersCountries[4].countries.length; i++) {
-    countriesListE += `<li><input type=checkbox class="checkbox"/> ${lettersCountries[4].countries[i]}</li>`
-}
-    countriesList.innerHTML = countriesListE
-}
 
 eBtn.addEventListener("click", function() {
     chosenLetter.textContent = lettersCountries[4].letter
     countriesNumber.textContent = lettersCountries[4].number
-    renderCountriesListE()
+    renderCountriesList(lettersCountries)
     }
 )
+
+//
+
 
 let fBtn = document.getElementById("f-btn")
 
@@ -256,7 +308,7 @@ let countriesListF = ""
 for (i = 0; i < lettersCountries[5].countries.length; i++) {
     countriesListF += `<li><input type=checkbox class="checkbox"/> ${lettersCountries[5].countries[i]}</li>`
 }
-    countriesList.innerHTML = countriesListM
+    countriesList.innerHTML = countriesListF
 }
 
 fBtn.addEventListener("click", function() {
@@ -266,6 +318,7 @@ fBtn.addEventListener("click", function() {
     }
 )
 
+
 let gBtn = document.getElementById("g-btn")
 
 function renderCountriesListG() {
@@ -273,7 +326,7 @@ let countriesListG = ""
 for (i = 0; i < lettersCountries[6].countries.length; i++) {
     countriesListG += `<li><input type=checkbox class="checkbox"/> ${lettersCountries[6].countries[i]}</li>`
 }
-    countriesList.innerHTML = countriesListM
+    countriesList.innerHTML = countriesListG
 }
 
 gBtn.addEventListener("click", function() {
@@ -283,6 +336,7 @@ gBtn.addEventListener("click", function() {
     }
 )
 
+
 let hBtn = document.getElementById("h-btn")
 
 function renderCountriesListH() {
@@ -290,7 +344,7 @@ let countriesListH = ""
 for (i = 0; i < lettersCountries[7].countries.length; i++) {
     countriesListH += `<li><input type=checkbox class="checkbox"/> ${lettersCountries[7].countries[i]}</li>`
 }
-    countriesList.innerHTML = countriesListM
+    countriesList.innerHTML = countriesListH
 }
 
 hBtn.addEventListener("click", function() {
@@ -300,6 +354,7 @@ hBtn.addEventListener("click", function() {
     }
 )
 
+
 let iBtn = document.getElementById("i-btn")
 
 function renderCountriesListI() {
@@ -307,7 +362,7 @@ let countriesListI = ""
 for (i = 0; i < lettersCountries[8].countries.length; i++) {
     countriesListI += `<li><input type=checkbox class="checkbox"/> ${lettersCountries[8].countries[i]}</li>`
 }
-    countriesList.innerHTML = countriesListM
+    countriesList.innerHTML = countriesListI
 }
 
 iBtn.addEventListener("click", function() {
@@ -317,6 +372,7 @@ iBtn.addEventListener("click", function() {
     }
 )
 
+
 let jBtn = document.getElementById("j-btn")
 
 function renderCountriesListJ() {
@@ -324,7 +380,7 @@ let countriesListJ = ""
 for (i = 0; i < lettersCountries[9].countries.length; i++) {
     countriesListJ += `<li><input type=checkbox class="checkbox"/> ${lettersCountries[9].countries[i]}</li>`
 }
-    countriesList.innerHTML = countriesListM
+    countriesList.innerHTML = countriesListJ
 }
 
 jBtn.addEventListener("click", function() {
@@ -334,6 +390,7 @@ jBtn.addEventListener("click", function() {
     }
 )
 
+
 let kBtn = document.getElementById("k-btn")
 
 function renderCountriesListK() {
@@ -341,7 +398,7 @@ let countriesListK = ""
 for (i = 0; i < lettersCountries[10].countries.length; i++) {
     countriesListK += `<li><input type=checkbox class="checkbox"/> ${lettersCountries[10].countries[i]}</li>`
 }
-    countriesList.innerHTML = countriesListM
+    countriesList.innerHTML = countriesListK
 }
 
 kBtn.addEventListener("click", function() {
@@ -351,6 +408,7 @@ kBtn.addEventListener("click", function() {
     }
 )
 
+
 let lBtn = document.getElementById("l-btn")
 
 function renderCountriesListL() {
@@ -358,7 +416,7 @@ let countriesListL = ""
 for (i = 0; i < lettersCountries[11].countries.length; i++) {
     countriesListL += `<li><input type=checkbox class="checkbox"/> ${lettersCountries[11].countries[i]}</li>`
 }
-    countriesList.innerHTML = countriesListM
+    countriesList.innerHTML = countriesListL
 }
 
 lBtn.addEventListener("click", function() {
@@ -367,6 +425,7 @@ lBtn.addEventListener("click", function() {
     renderCountriesListL()
     }
 )
+
 
 let mBtn = document.getElementById("m-btn")
 
@@ -385,6 +444,7 @@ mBtn.addEventListener("click", function() {
     }
 )
 
+
 let nBtn = document.getElementById("n-btn")
 
 function renderCountriesListN() {
@@ -401,6 +461,7 @@ nBtn.addEventListener("click", function() {
     renderCountriesListN()
     }
 )
+
 
 let oBtn = document.getElementById("o-btn")
 
@@ -419,6 +480,7 @@ oBtn.addEventListener("click", function() {
     }
 )
 
+
 let pBtn = document.getElementById("p-btn")
 
 function renderCountriesListP() {
@@ -435,6 +497,7 @@ pBtn.addEventListener("click", function() {
     renderCountriesListP()
     }
 )
+
 
 let qBtn = document.getElementById("q-btn")
 
@@ -453,6 +516,7 @@ qBtn.addEventListener("click", function() {
     }
 )
 
+
 let rBtn = document.getElementById("r-btn")
 
 function renderCountriesListR() {
@@ -469,6 +533,7 @@ rBtn.addEventListener("click", function() {
     renderCountriesListR()
     }
 )
+
 
 let sBtn = document.getElementById("s-btn")
 
@@ -487,6 +552,7 @@ sBtn.addEventListener("click", function() {
     }
 )
 
+
 let tBtn = document.getElementById("t-btn")
 
 function renderCountriesListT() {
@@ -503,6 +569,7 @@ tBtn.addEventListener("click", function() {
     renderCountriesListT()
     }
 )
+
 
 let uBtn = document.getElementById("u-btn")
 
@@ -521,6 +588,7 @@ uBtn.addEventListener("click", function() {
     }
 )
 
+
 let vBtn = document.getElementById("v-btn")
 
 function renderCountriesListV() {
@@ -538,38 +606,26 @@ vBtn.addEventListener("click", function() {
     }
 )
 
-let wBtn = document.getElementById("w-btn")
 
-function renderCountriesListW() {
-let countriesListW = ""
-for (i = 0; i < lettersCountries[22].countries.length; i++) {
-    countriesListW += `<li><input type=checkbox class="checkbox"/> ${lettersCountries[22].countries[i]}</li>`
-}
-    countriesList.innerHTML = countriesListW
-}
+let wBtn = document.getElementById("w-btn")
 
 wBtn.addEventListener("click", function() {
     chosenLetter.textContent = lettersCountries[22].letter
     countriesNumber.textContent = lettersCountries[22].number
-    renderCountriesListW()
+    countriesList.textContent = ""
     }
 )
-let xBtn = document.getElementById("x-btn")
 
-function renderCountriesListX() {
-let countriesListX = ""
-for (i = 0; i < lettersCountries[23].countries.length; i++) {
-    countriesListX += `<li><input type=checkbox class="checkbox"/> ${lettersCountries[23].countries[i]}</li>`
-}
-    countriesList.innerHTML = countriesListX
-}
+
+let xBtn = document.getElementById("x-btn")
 
 xBtn.addEventListener("click", function() {
     chosenLetter.textContent = lettersCountries[23].letter
     countriesNumber.textContent = lettersCountries[23].number
-    renderCountriesListX()
+    countriesList.textContent = ""
     }
 )
+
 
 let yBtn = document.getElementById("y-btn")
 
