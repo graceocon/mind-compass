@@ -1,15 +1,14 @@
-@font-face {
-    font-family: "nordic";
-    src: url("PTF-NORDIC-Rnd-Lt.ttf");
-}
+/* LAYOUT */
 
 body {
-    font-family: "nordic";
+    font-family: "Poppins", sans-serif;
     text-align: center;
     margin: 0;
+    padding: 0;
+    background-color: #F2F0EF;
+    font-size: 1rem;
+    color: #2d2d2d;
 }
-
-/* Layout */
 
 header, .more-games-section {
     background-color: #ffa62b;
@@ -25,16 +24,17 @@ section {
 }
 
 .container {
-    width: 960px;
+    width: 430px;
     margin: 0 auto;
+
 }
 
-/* Typography */
+/* TYPOGRAPHY */
 
 h1 {
     padding: 50px 0 40px;
     margin: 0;
-    font-size: 70px;
+    font-size: 3rem;
 }
 
 h2 {
@@ -55,7 +55,14 @@ p {
     font-size: 1.25rem;
 }
 
-/* Buttons and generated letter / countries */
+/* OTHER CLASSES */
+
+.mindcompass-title {
+    font-weight: 900;
+    color: hotpink;
+}
+
+/* BUTTONS */
 
 .letter-game-button {
     font-family: inherit;
@@ -74,23 +81,27 @@ p {
 
 #letter-btns {
     margin: 0 auto;
-    width: 600px;
     text-align: center;
 }
 
 .flex-width {
-    width: 250px;
+    width: 100px;
 }
 #generated-letter-countries {
-    width: 750px;
     display: flex;
     justify-content: space-between;
     /* flex-direction: column; */
+    text-align: left;
     margin: 0 auto;
 }
 
 #countries-list {
+    list-style: none;
     padding-bottom: 40px;
+}
+
+.checkbox {
+    
 }
 
 /* Play more games section */
