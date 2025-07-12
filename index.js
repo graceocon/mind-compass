@@ -66,7 +66,7 @@ document.addEventListener("click", function(e){
         renderCountryObj(countriesData[17])
     }
     else if (e.target.id === 's-btn'){
-        renderCountryaObj(countriesData[18])
+        renderCountryObj(countriesData[18])
     }
     else if (e.target.id === 't-btn'){
         renderCountryObj(countriesData[19])
@@ -103,10 +103,19 @@ function renderRandomObj(){
     if (countriesData[randomCountryData].countries.length){
         countriesData[randomCountryData].countries.forEach(function(country){
                 randomCountriesList +=
-                `<li>
-                <input type=checkbox class="checkbox"/>
-                ${country}
-                </li>`
+                `
+                <ul>
+                    <li class="list-items">
+                    <div  class="country">
+                        <i class="fa-regular fa-lightbulb"></i>
+                        <input type=checkbox class="tick"/>
+                    </div>
+                    <div class="country">
+                        ${country}
+                    </div>
+                    </li>
+                </ul>
+                `
             })
     }
     chosenLetterCountries.innerHTML = randomCountriesList
@@ -121,11 +130,43 @@ function renderCountryObj(letterObj) {
     let countryList = ""
     letterObj.countries.forEach(function(country){
             countryList +=
-            `<li>
-            <input type=checkbox class="checkbox"/>
-            ${country}
-            </li>`
+            `
+            <ul>
+                <li class="list-items">
+                <div  class="country">
+                    <i class="fa-regular fa-lightbulb lightbulb"></i>
+                    <input type=checkbox class="tick"/>
+                </div>
+                <div class="country">
+                    ${country}
+                </div>
+                </li>
+            </ul>
+            `
         })
         
     chosenLetterCountries.innerHTML = countryList
 }
+
+
+// function renderCountryObj(letterObj) {
+
+//     chosenLetter.textContent = letterObj.letter
+//     chosenLetterNumber.textContent = letterObj.number
+
+//     let countryList = ""
+//     letterObj.countries.forEach(function(country){
+//             countryList +=
+//             `<div class="tick-wrapper">
+//                 <div class="round">
+//                     <li class="list-items">
+//                         <input type="checkbox" id="tick" />
+//                         <label for="tick"></label>
+//                         ${country}
+//                     </li>
+//                 </div>
+//             </div>`
+//         })
+        
+//     chosenLetterCountries.innerHTML = countryList
+// }

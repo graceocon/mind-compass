@@ -39,15 +39,25 @@ h2 {
     color: #2d2d2d;
 }
 
+h3,
+h4,
+h5 {
+    font-size: 1.75rem;
+}
+
 h3 {
     margin: 30px 0 0 0;
-    font-size: 1.75rem;
+
 }
 
 h4 {
     padding: 30px 0 10px;
-    font-size: 1.75rem;
     margin-bottom: 0;
+}
+
+h5 {
+    margin: 0;
+    padding-bottom: 10px;
 }
 
 h2,
@@ -65,6 +75,7 @@ p {
 ul {
     margin: 0;
     border: 1px solid red;
+    list-style: none;
 }
 
 a {
@@ -81,7 +92,7 @@ a {
     font-size: 3rem;
     font-weight: 900;
     color: hotpink;
-    text-shadow: 0 0 2px #fff;
+    text-shadow: 0 0 5px whitesmoke;
     padding: 0;
 }
 
@@ -100,18 +111,21 @@ a {
 }
 
 .chosen-letter-countries {
-    list-style: none;
     font-size: 1rem;
 }
 
-.checkbox {
-    
+.tick,
+.lightbulb {
+    cursor: pointer;
 }
 
-/* .more-games-btns {
-    display: flex;
-    flex-direction: column;
-} */
+.tick:checked {
+    background-color: hotpink;
+}
+
+.country {
+    display: inline-block;
+}
 
 
 /* BUTTONS */
@@ -147,6 +161,10 @@ a {
     padding: 10px 0;
 }
 
+/* .random-letter-btn:visited {
+    color: #29111d;
+} */
+
 .all-btns:hover,
 .all-btns:active {
     background-color: #ffa62b;
@@ -156,4 +174,49 @@ a {
 .all-btns:active {
     background-color: #F2F0EF;
     color: #2d2d2d;
+}
+
+/* MODAL */
+  
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    height: 420px;
+    width: 300px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px 2px #666;
+    background-color: #2d2d2d;
+    color: whitesmoke;
+    opacity: 99.5%;
+}
+
+.modal-inner{
+    width: 290px;
+    margin: 0 auto;
+}
+
+/* MODAL BUTTONS */
+
+.close-modal-btn-container{
+    text-align: right;
+    margin: 10px 10px 0 0;
+}
+
+.modal-close-btn {
+  font-size: 22px;
+  font-weight: bold;
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: whitesmoke;
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:active{
+    color: hotpink;
+    cursor: pointer;
 }

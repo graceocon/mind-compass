@@ -2,12 +2,20 @@
 <html lang="en">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="styles.css">
 
+        <!-- GOOGLE FONTS -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700;900&display=swap"
+            rel="stylesheet">
 
+        <!-- FONT AWESOME -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+            integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer" />
     </head>
     <body>
         <header>
@@ -61,7 +69,18 @@
                         </div>
                         <div class="flex-width">
                             <p>Countries:</p>
-                            <ul id="chosen-letter-countries" class="chosen-letter-countries"></ul>
+                            <p>Click the lightbulb for some hints</p>
+                            <div id="chosen-letter-countries" class="chosen-letter-countries"></div>
+                        </div>
+                    </div>
+                <section>
+                    <div class="modal" id="modal">
+                        <div class="close-modal-btn-container">
+                            <button class="modal-close-btn" id="modal-close-btn">X</button>
+                        </div>
+                        <div class="modal-inner" id="modal-inner">
+                            <h5>Here are some handy hints...</h5>
+                            <ul class="modal-text" id="modal-text"></ul>				
                         </div>
                     </div>
                 </section>
