@@ -161,20 +161,24 @@ a {
     padding: 10px 0;
 }
 
-/* .random-letter-btn:visited {
-    color: #29111d;
-} */
-
 .all-btns:hover,
 .all-btns:active {
     background-color: #ffa62b;
 }
 
 .end-btns:hover,
-.all-btns:active {
+.end-btns:active {
     background-color: #F2F0EF;
     color: #2d2d2d;
 }
+
+.random-letter-btn:focus {
+    background-color: hotpink;
+}
+
+/* .random-letter-btn:visited {
+    background-color: #3b021f;
+} */
 
 /* MODAL */
   
