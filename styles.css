@@ -224,3 +224,12 @@ a {
     color: hotpink;
     cursor: pointer;
 }
+
+/* MORE GAMES */
+
+.chosen-letter-countries {
+    margin-bottom: 50px;
+}
+.more-games-section {
+    display: none;
+}
