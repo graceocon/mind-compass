@@ -1,19 +1,19 @@
 
-import { countriesData } from "./data.js"
-
 import { mainData } from "./maindata.js"
 
 const randomBtn = document.getElementById("random-btn")
 const letterBtns = document.getElementById("letter-btns")
-const buttonSection = document.getElementById("button-section")
+const scrollPoint = document.getElementById("button-section")
 
 const chosenLetter = document.getElementById("chosen-letter")
 const chosenLetterNumber = document.getElementById("chosen-letter-number")
 const chosenLetterCountries = document.getElementById("chosen-letter-countries")
 
+const numberT = ""
+const territories = ""
 
 randomBtn.addEventListener("click", function() {
-    buttonSection.scrollIntoView({ behavior: 'smooth' })
+    scrollPoint.scrollIntoView({ behavior: 'smooth' })
     const randomIndex = Math.floor( Math.random() * mainData.letterObjs.length)
     renderCountriesList(mainData.letterObjs, randomIndex)
 })
@@ -36,7 +36,7 @@ function renderCountriesList(data, index) {
             <ul>
                 <li class="list-items">
                 <div class="country">
-                    <i id=${country.id} class="fa-regular fa-lightbulb lightbulb"></i>
+                    <i id=${country.name} class="fa-regular fa-lightbulb lightbulb"></i>
                     <input type=checkbox class="tick"/>
                 </div>
                 <div class="country">
