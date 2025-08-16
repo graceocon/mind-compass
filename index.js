@@ -1,6 +1,8 @@
 
 import { mainData } from "./maindata.js"
+import { countries } from "./dataCountries.js"
 
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 const randomBtn = document.getElementById("random-btn")
 const letterBtns = document.getElementById("letter-btns")
 const scrollPoint = document.getElementById("button-section")
@@ -51,8 +53,7 @@ function renderCountriesList(data, index) {
 
 
 function renderButtons(data) {
-    const letterArr = data.letters.split("")
-    letterArr.forEach(letter => {
+    letters.split("").forEach(letter => {
         letterBtns.innerHTML += `
             <button id=${letter} class="random-letter-btn all-btns">${letter}</button>
         `

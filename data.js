@@ -22,7 +22,7 @@ export const countriesData = [
     {
         letter: "E",
         number: 8,
-        countries: ["Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini (formally Swaziland)", "Ethiopia"]
+        countries: ["Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "*Eswatini (formally Swaziland)", "*Ethiopia"]
     },
     {
         letter: "F",
@@ -50,7 +50,7 @@ export const countriesData = [
         countries: ["Jamaica", "Japan", "Jordan"]
     },
     {
-        letter: "K",
+        letter: "*K",
         number: 5,
         countries: ["Kazakhstan", "Kenya", "Kiribati", "Kuwait", "Kyrgyzstan"]
     },
@@ -75,7 +75,7 @@ export const countriesData = [
         countries: ["Oman"]
     },
     {
-        letter: "P",
+        letter: "*P",
         number: 10,
         countries: ["Pakistan", "Palau", "Palestine State", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal"]
     },
@@ -95,7 +95,7 @@ export const countriesData = [
         countries: ["Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Korea", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Sweden", "Switzerland", "Syria"]
     },
     {
-        letter: "T",
+        letter: "*T",
         number: 11,
         countries: ["Tajikistan", "Tanzania", "Thailand", "Timor-Leste", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu"]
     },
@@ -105,7 +105,7 @@ export const countriesData = [
         countries: ["Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States of America", "Uruguay", "Uzbekistan"]
     },
     {
-        letter: "V",
+        letter: "*V",
         number: 3,
         countries: ["Vanuatu", "Venezuela", "Vietnam"]
     },
